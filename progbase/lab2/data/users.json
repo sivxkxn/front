@@ -1,5 +1,5 @@
 {
-    "nextId": 23,
+    "nextId": 36,
     "items": [
         {
             "id": 1,
@@ -29,13 +29,13 @@
             "isEnabled": 0
         },
         {
-            "id": 4,
-            "login": "user",
-            "fullname": "My name",
-            "role": 0,
-            "registeredAt": "Wed Oct 14 2020 07:40:21 GMT+0300 (EEST)",
-            "avaUrl": "https://google.com/pct",
-            "isEnabled": 1
+            "id": 34,
+            "login": "string",
+            "fullname": "string",
+            "role": "string",
+            "registeredAt": 1,
+            "avaUrl": "01-01-2021",
+            "isEnabled": 0
         }
     ]
 }

@@ -29,7 +29,7 @@ class courseRepository {
         let coursesArr = this.getCourses()
         coursesArr.push(theCourse)
         this.storage.writeItems(coursesArr)
-        return this.nextId
+        return theCourse.id
     }
 
     updateCourse(theCourse) {

@@ -26,12 +26,12 @@ class UserRepository {
     }
 
     addUser(theUser) {
-        theUser.id = this.nextId
-        theUser=new User(theUser.id, theUser.login, theUser.fullname, theUser.role, theUser.registeredAt, theUser.avaUrl, theUser.isEnabled)
+        theUser.id =this.nextId
+        theUser = new User(theUser.id, theUser.login, theUser.fullname, theUser.role, theUser.registeredAt, theUser.avaUrl, theUser.isEnabled)
         let usersArr = this.getUsers()
         usersArr.push(theUser)
         this.storage.writeItems(usersArr)
-        return this.nextId
+        return theUser.id
 
 
     }
@@ -41,6 +41,7 @@ class UserRepository {
         let index = this.items.findIndex(x => x.id === theUser.id)
         this.items[index] = new User(theUser.id, theUser.login, theUser.fullname, theUser.avaUrl, theUser.role, theUser.registeredAt, theUser.isEnabled)
         this.storage.writeItems(this.items)
+        // return theUser
     }
 
     deleteUser(userId) {

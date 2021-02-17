@@ -10,7 +10,12 @@ class JsonStorage {
     }
 
     incrementNextId() {
-        return ++this.obj.nextId
+        let newModel={}
+        newModel.nextId=++this.obj.nextId
+        newModel.items=this.readItems().items
+        const text = JSON.stringify(newModel, null, 4)
+        fs.writeFileSync(this.filePath, text)
+
     }
 
     readItems() {
