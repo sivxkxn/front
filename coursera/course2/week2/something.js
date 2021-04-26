@@ -50,3 +50,32 @@ let victor = new Teacher('victor', 'math');
 victor.putMark();
 
 //the chain of prototypes
+console.log(Teacher.prototype.isPrototypeOf(ann));
+console.log(ann instanceof Teacher)
+//three constactors for creating an object
+let animal = {
+    type: 'animal',
+    sound: 'base sound',
+    getSound: function () {
+        console.log(this.sound);
+    }
+};
+let cow = Object.create(animal,
+    {
+        type: 'cow',
+        sound: 'mu-mu',
+    });
+cow.getSound();
+// object factory
+let personProto = {};
+personProto.sayName = function () { console.log(this.name) };
+let pupilProto = Object.create(personProto);
+pupilProto.create = function (name) {
+    return Object.create(this, { 'name': name });
+}
+let kolya = pupilProto.create('kolya');
+kolya.sayName();
+
+
+
+

@@ -1,35 +1,16 @@
-// function Student(name, age) {
-//     this.name = name
-//     this.age = age
+function Animal() {}
 
-// }
-// Student.prototype.getName = function () {
-//     return this.name
-// }
-// Student.prototype.getAge = function () {
-//     return this.age
-// }
-// let vasya = new Student('Vasya', 26)
-// let vika = new Student('Vika', 17)
-// // console.log(vasya.getName())
-// if (vika.constructor === Student)
-//     // console.log('true')
-//     /////////////
-//     function Human(name) {
-//         this.name = name
-//     }
-// function Puple(grade) {
-//     this.grade = grade
-// }
-// function Teacher(subject) {
-//     this.subject = subject
-// }
-// Object.setPrototypeOf(Puple, Human)
-// Object.setPrototypeOf(Teacher, Human)
-// Teacher.prototype.teaching = function () {
-//     console.log('I am teaching')
-// }
-// Puple.prototype.sleeping = function () {
-//     console.log('I am sleeping')
-// }
+Animal.prototype.sleep = function () {};
 
+function Cat() {}
+
+Cat.prototype = Animal.prototype;
+Cat.prototype.meow = function () {};
+
+function Dog() {}
+
+Dog.prototype = Animal.prototype;
+Dog.prototype.woof = function () {};
+
+var sharik = new Dog();
+console.log(sharik.woof)
