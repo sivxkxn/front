@@ -18,7 +18,7 @@
 // let timerId = setInterval(func2, 2000);
 // setTimeout(clearInterv, 9000, timerId);
 // console.time('readFileSync');
-const fs = require('fs');
+// const fs = require('fs');
 // fs.readFile('./data.json', 'utf-8', function (err, data) {
 //     console.log(data);
 // });
@@ -33,18 +33,18 @@ const fs = require('fs');
 
 // }
 
-let promise = new Promise(function (resolve, reject) {
-    fs.readFile('data.json', 'utf-8', function (err, data) {
-        if (err) {
-            reject(err);
-        }
-        else {
-            resolve(data);
-        }
-    })
-}
-).then(function (data) {
-    console.log(data);
-}, function (err) {
-    console.log(err)
-});
+// let promise = new Promise(function (resolve, reject) {
+//     fs.readFile('data.json', 'utf-8', function (err, data) {
+//         if (err) {
+//             reject(err);
+//         }
+//         else {
+//             resolve(data);
+//         }
+//     })
+// }
+// ).then(function (data) {
+//     console.log(data);
+// }, function (err) {
+//     console.log(err)
+// });
